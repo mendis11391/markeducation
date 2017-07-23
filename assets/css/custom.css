@@ -1,0 +1,163 @@
+.textCenter {
+    text-align: center;
+}
+/* To solve a conflict with other CSS styles */
+
+.datepicker.dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+}
+.p-l-0 {
+    padding-left: 0 !important;
+}
+.p-r-0 {
+    padding-right: 0 !important;
+}
+.p-30 {
+    padding: 30px;
+}
+.p-12 {
+    padding: 12px !important;
+}
+.textBold {
+    font-weight: bold;
+}
+.verifyInputBx {
+    border-radius: 4px 0 0px 5px !important;
+}
+.verifyInputBtn,
+.verifyInputBtn:focus {
+    border-radius: 0 5px 5px 0;
+    background: #04B40B;
+    border-color: #00af07;
+    color: #fff;
+    text-transform: uppercase;
+}
+.verifyInputBtn:hover {
+    border-radius: 0 5px 5px 0;
+    background: #fff;
+    border-color: #00af07;
+    color: #04B40B;
+    text-transform: uppercase;
+}
+.m-0 {
+    margin: 0 auto;
+}
+.m-b-20{
+    margin-bottom: 20px;
+}
+.closeBtn {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-color: #e64817;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 3px solid #e64817;
+}
+.closeBtn:hover {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-color: #fff;
+    color: #e64817;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 3px solid #e64817;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background: #e5e5e5;
+}
+.studentDataTitle tr td {
+    padding: 20px 30px !important;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.verificationTableDetails {
+    padding: 20px 60px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 55%;
+}
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.verificationResult {
+    display: table;
+    width: 100%;
+}
+.modalHeader {
+    background: url(../../assets/img/bg.png);
+    padding: 24px;
+    border-radius: 4px;
+}
+.modalHeaderTitle {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+#rootwizard .nav>li>a{
+    border-bottom: 1px solid #3db6ff;
+    border-radius: 0;
+}
+
+#rootwizard .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    color: #3db6ff;
+    background: none;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+
+#updateStudentDetailsDiv .nav>li>a{
+    border-bottom: 1px solid #3db6ff;
+    border-radius: 0;
+}
+
+#updateStudentDetailsDiv .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    color: #3db6ff;
+    background: none;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: none;
+    border-radius: 0;
+}
