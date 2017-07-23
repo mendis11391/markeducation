@@ -70,15 +70,25 @@
 			<div class="col-md-12 modalHeader">
 				<div class="modalHeaderTitle"><span>Student Detail</span></div>
 			</div>
-			<div class="col-md-12 p-30">
+			<div class="col-md-12 p-30 modalResultErrorDiv">
+			<div class="form-group">
+					<div class="col-sm-12 textCenter" style="margin: 60px 0;">
+                     <span class="col-sm-12 alert alert-danger">Certificate Number does not exist</span>
+                  </div>
+				</div>
+			</div>
+			<div class="col-md-12 p-30 modalResultDiv">
 			<div class="form-group">
 					<div class="col-sm-2"></div>
-					<div class="col-sm-5 p-r-0">
+					<!--<div class="col-sm-5 p-r-0">
 						<input type="text" class="form-control certificateNumberForVerification verifyInputBx" placeholder="Enter your verification #">
 					</div>
 					<div class="col-sm-3 p-l-0">
 						<a class="btn btn-block verifyInputBtn" href="javascript:;" id="verifyStudent">Verify</a>
-					</div>
+					</div>-->
+					<div class="col-sm-12 p-l-0">
+                     <img class="img-responsive profilePhoto" alt="No Image" width="160" style="margin: 0 auto;"/>
+                  </div>
 					<div class="col-sm-2"></div>
 				</div>
 			</div>

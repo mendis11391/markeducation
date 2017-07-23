@@ -514,13 +514,20 @@ $('#verifyStudent').on('click', function() {
             if (response.indexOf("Undefined variable") <= -1 && response.indexOf("undefined") <= -1) {
                 var obj = jQuery.parseJSON(response);
                 var studentName = obj[1].firstName + " " + obj[1].lastName;
+                $(".modalResultErrorDiv").hide();
                 $(".dispStudentName").text(studentName);
                 $(".dispCourse").text(obj[1].courseStudied);
                 $(".dispGrade").text(obj[1].Grade);
                 $(".dispCertificateNum").text(obj[1].certificateNumber);
                 $(".dispCertificateIssueDate").text(obj[1].certificateIssueDate);
+                $(".profilePhoto").attr('src',obj[1].photo);
+                $(".studentDataTitle").show();
+                $(".modalResultDiv").show();
 
             } else {
+                $(".studentDataTitle").hide();
+                $(".modalResultDiv").hide();
+                $(".modalResultErrorDiv").show();
                 $(".dispStudentName").text("Does not exist");
                 $(".dispCourse").text("Does not exist");
                 $(".dispGrade").text("Does not exist");

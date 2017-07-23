@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION["markEduUsername"])){
-  header("Location: index.php");
+  echo '<script>window.location = "index.php";</script>';
 }
 ?>
 
