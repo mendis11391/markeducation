@@ -14,7 +14,11 @@ $(document).ready(function() {
     $('#rootwizard').bootstrapWizard({
         onNext: function(tab, navigation, index) {
             if (index == 1) {
-                if ($('.certificateNumber').val() == "") {
+                var valid = true;
+                if ($('.certificateNumber').val() == "" || $('.firstName').val() == ""){
+                    valid = false;
+                }
+                if (valid == false) {
                     $.notify({
                         icon: "pe-7s-bandaid",
                         message: "Please fill all the fields!"
