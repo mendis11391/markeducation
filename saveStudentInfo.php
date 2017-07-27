@@ -36,13 +36,13 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="form-group">
-                                       <label>Certificate Number</label>
+                                       <label>Certificate Number</label><span class="required"> *</span>
                                        <input type="text" class="form-control certificateNumber" name="certificateNumber" placeholder="Certificate Number" value="">
                                     </div>
                                  </div>
                                  <div class="col-md-4">
                                     <div class="form-group">
-                                       <label>First Name</label>
+                                       <label>First Name</label><span class="required"> *</span>
                                        <input type="text" class="form-control firstName" name="firstName" placeholder="First Name" value="">
                                     </div>
                                  </div>
@@ -56,14 +56,14 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="form-group">
-                                       <label>Date Of Birth</label>
-                                       <input type="text" class="form-control datepicker DOB" name="DOB" placeholder="DOB" value="">
+                                       <label>Date Of Birth</label><span class="required"> *</span>
+                                       <input type="text" class="form-control DOB" name="DOB" placeholder="DOB" value="">
                                        <input type="hidden" class="form-control datepicker age" name="age" placeholder="DOB" value="">
                                     </div>
                                  </div>
                                  <div class="col-md-4">
                                     <div class="form-group">
-                                       <label>Mobile</label>
+                                       <label>Mobile</label><span class="required"> *</span>
                                        <input type="text" class="form-control mobile" name="mobile" placeholder="Mobile" value="">
                                     </div>
                                  </div>
@@ -83,7 +83,7 @@ if(!isset($_SESSION["markEduUsername"])){
                                  </div>
                                  <div class="col-md-4">
                                     <div class="form-group">
-                                       <label>Father / Husband Name</label>
+                                       <label>Father / Husband / Guardian Name</label><span class="required"> *</span>
                                        <input type="text" class="form-control fatherName" name="fatherName" placeholder="Father / Husband Name" value="">
                                     </div>
                                  </div>
@@ -91,7 +91,7 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="form-group">
-                                       <label>Address</label>
+                                       <label>Address</label><span class="required"> *</span>
                                        <textarea rows="4" class="form-control address" name="address" placeholder="Address" value="Mike"></textarea>
                                     </div>
                                  </div>
@@ -197,7 +197,7 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="form-group">
-                                       <label>Skills</label>
+                                       <label>Skills</label><span class="required"> *</span>
                                        <input type="text" class="form-control skills" name="skills" placeholder="Skills (eg: Tally, Excel)" value="">
                                     </div>
                                  </div>
@@ -205,13 +205,13 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>Course Studied</label>
+                                       <label>Course Studied</label><span class="required"> *</span>
                                        <input type="text" class="form-control courseStudied" name="courseStudied" placeholder="Course Studied" value="">
                                     </div>
                                  </div>
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>Course Duration</label>
+                                       <label>Course Duration</label><span class="required"> *</span>
                                        <input type="text" class="form-control courseDuration" name="courseDuration" placeholder="Course Duration" value="">
                                     </div>
                                  </div>
@@ -219,13 +219,13 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>Certificate Issue Date</label>
+                                       <label>Certificate Issue Date</label><span class="required"> *</span>
                                        <input type="text" class="form-control datepicker certificateIssueDate" name="certificateIssueDate" placeholder="Issue Date" value="">
                                     </div>
                                  </div>
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>Grade</label>
+                                       <label>Grade</label><span class="required"> *</span>
                                        <input type="text" class="form-control grade" name="grade" placeholder="Grade" value="">
                                     </div>
                                  </div>

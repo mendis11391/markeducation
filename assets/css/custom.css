@@ -1,8 +1,12 @@
 .textCenter {
     text-align: center;
 }
-/* To solve a conflict with other CSS styles */
 
+.required{
+    color: red;
+}
+
+/* To solve a conflict with other CSS styles */
 .datepicker.dropdown-menu {
     visibility: visible;
     opacity: 1;
