@@ -20,12 +20,11 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   </head>
   <body style="background: url(./assets/img/bg_1.jpg); background-size:cover;">
-    <div class="content">
+    <div class="content verifyDiv">
       <div class="content">
         <div class="container" style="width: 30%;">
           <div class="card" style="margin-top: 25vh;">
             <div class="content">
-              <form action="" method="post">
                 <div class="form-group has-feedback">
                   <img src="assets/img/logo.png" class="img-responsive" style="margin: 0 auto;"/>
 				  <img src="assets/img/loading.gif" width="70" class="loader" style="position: fixed; top: 40%; left: 65%; z-index: 1; margin-left: -250px; display:none;"/>
@@ -39,7 +38,6 @@
                     <a class="btn btn-info btn-block" href="javascript:;" id="verifyStudent">Verify</a>
                   </div>
                 </div>
-              </form>
             </div>
           </div>
         </div>
@@ -49,58 +47,62 @@
         <!-- Modal content -->
         <div class="modal-content">
           <div class="verificationResult">
-            <div class="col-md-12 modalHeader">
-              <div class="modalHeaderTitle"><span>Student Detail</span></div>
-            </div>
-            <div class="col-md-12 p-30 modalResultErrorDiv">
+		  <div class="col-md-12 p-5 certiBorder modalResultErrorDiv">
+			<div class="col-md-12"><a class="pull-right closeBtn" href="javascript:;"><button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="color:#000;">×</button></a></div>
+			<div class="col-md-12">
+		  <img src="assets/img/logo.png" class="img-responsive" width="200" style="margin-top: -10px; margin: 0 auto;">
+		  </div>
               <div class="form-group">
                 <div class="col-sm-12 textCenter" style="margin: 60px 0;">
                   <span class="col-sm-12 alert alert-danger">Certificate Number does not exist</span>
                 </div>
               </div>
             </div>
-            <div class="col-md-12 p-30 modalResultDiv">
-              <div class="form-group">
+            <div class="col-md-12 p-5 modalResultDiv">
+              <div class="certiBorder col-md-12">
+			  
+				<div class="form-group">
                 <div class="col-sm-2"></div>
-                <!--<div class="col-sm-5 p-r-0">
-                  <input type="text" class="form-control certificateNumberForVerification verifyInputBx" placeholder="Enter your verification #">
-                  </div>
-                  <div class="col-sm-3 p-l-0">
-                  <a class="btn btn-block verifyInputBtn" href="javascript:;" id="verifyStudent">Verify</a>
-                  </div>-->
                 <div class="col-sm-12 p-l-0">
-                  <img class="img-responsive profilePhoto" alt="No Image" width="160" style="margin: 0 auto;"/>
+				
+				<div class="row">
+				<a class="pull-right closeBtn" href="javascript:;"><button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="color:#000;">×</button></a>
+				</div>
+				<div class="col-md-12">
+		  <img src="assets/img/logo.png" class="img-responsive" width="200" style="margin-top: -10px;">
+		  </div>
+                  <!--<img class="img-responsive profilePhoto" alt="No Image" width="160" style="margin: 0 auto;"/>-->
+				  <div class="col-md-12 textCenter">
+					<h3 class="dispStudentName"></h3>
+					<p>has successfully completed <b><span class="dispCourse"></span></b></p>
+					<p>from <b>Mark Education Acadamy</b></p>
+				  </div>
                 </div>
+				<table style="width:100%;" class="studentDetailTable">
+				  <tr>
+					<td>Grade</td>
+					<td>: <span class="dispGrade"></span></td>
+					<td></td>
+				  </tr>
+				  <tr>
+					<td>Certificate Number</td>
+					<td>: <span class="dispCertificateNum"></span></td>
+					<td></td>
+				  </tr>
+				  <tr>
+					<td>Certificate Date</td>
+					<td>: <span class="dispCertificateIssueDate"></span></td>
+					<td class="pull-right instituteName"><b>Mark Education Academy</b></td>
+				  </tr>
+				</table>
                 <div class="col-sm-2"></div>
               </div>
+			  </div>
             </div>
-            <table class="table table-striped studentDataTitle">
-              <tbody>
-                <tr>
-                  <td class="">Student Name</td>
-                  <td><span class="dispStudentName"></span></td>
-                </tr>
-                <tr>
-                  <td class="">Course</td>
-                  <td><span class="dispCourse"></span></td>
-                </tr>
-                <tr class="">
-                  <td class="">Grade</td>
-                  <td><span class="dispGrade"></span></td>
-                </tr>
-                <tr>
-                  <td class="">Certificate Number</td>
-                  <td><span class="dispCertificateNum"></span></td>
-                </tr>
-                <tr>
-                  <td class="">Certificate Issue Date</td>
-                  <td><span class="dispCertificateIssueDate"></span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="col-md-12">
+            
+            <!--<div class="col-md-12">
               <a class="btn btn-block closeBtn" href="javascript:;">CLOSE</a>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>

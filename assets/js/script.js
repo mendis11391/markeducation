@@ -594,7 +594,11 @@ $('#verifyStudent').on('click', function () {
 					$(".dispCourse").text(obj[1].courseStudied);
 					$(".dispGrade").text(obj[1].Grade);
 					$(".dispCertificateNum").text(obj[1].certificateNumber);
-					$(".dispCertificateIssueDate").text(obj[1].certificateIssueDate);
+					var dateString = obj[1].certificateIssueDate;
+					var dateObj = new Date(dateString);
+					var momentObj = moment(dateObj);
+					var formattedCertificateDate = momentObj.format('MMM DD, YYYY');
+					$(".dispCertificateIssueDate").text(formattedCertificateDate);
 					$(".profilePhoto").attr('src', obj[1].photo);
 					$(".studentDataTitle").show();
 					$(".modalResultDiv").show();
@@ -665,6 +669,6 @@ $('.verifyInputBtn').on('click', function () {
 
 });
 
-$(".closeBtn").click(function () {
+$(".closeBtn, body").click(function () {
 	$("#myModal").hide();
-})
+});

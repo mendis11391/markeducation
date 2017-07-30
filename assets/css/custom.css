@@ -21,9 +21,23 @@
 .p-30 {
     padding: 30px;
 }
+
+.p-t-30 {
+    padding-top: 30px;
+}
+
 .p-12 {
     padding: 12px !important;
 }
+
+.p-5{
+    padding: 5px !important;
+}
+
+.f-r{
+    float: right;
+}
+
 .textBold {
     font-weight: bold;
 }
@@ -51,26 +65,6 @@
 .m-b-20{
     margin-bottom: 20px;
 }
-.closeBtn {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    background-color: #e64817;
-    color: #fff;
-    border-radius: 5px;
-    text-transform: uppercase;
-    border: 3px solid #e64817;
-}
-.closeBtn:hover {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    background-color: #fff;
-    color: #e64817;
-    border-radius: 5px;
-    text-transform: uppercase;
-    border: 3px solid #e64817;
-}
 .table-striped>tbody>tr:nth-of-type(odd) {
     background: #e5e5e5;
 }
@@ -88,7 +82,7 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 120px;
     left: 0;
     top: 0;
     width: 100%;
@@ -101,7 +95,7 @@
     background-color: #fefefe;
     margin: auto;
     border: 1px solid #888;
-    width: 55%;
+    width: 80%;
 }
 /* The Close Button */
 
@@ -164,4 +158,33 @@
     border-right: 1px solid;
     border-bottom: none;
     border-radius: 0;
+}
+
+
+.certiBorder{
+    border: 8px solid #3cc6ea;
+}
+
+.studentDetailTable td{
+    padding: 5px;
+}
+
+.dispStudentName{
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+
+.verifyDiv .container{
+    width: 95% !important;
+}
+
+.instituteName{
+    display: none;
+}
+
+
 }
