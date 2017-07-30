@@ -672,3 +672,7 @@ $('.verifyInputBtn').on('click', function () {
 $(".closeBtn, body").click(function () {
 	$("#myModal").hide();
 });
+
+$(".verificationResult").click(function(e){
+  e.stopPropagation();
+});
