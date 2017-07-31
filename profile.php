@@ -18,18 +18,23 @@
   }
   ?>
 <div class="content" style="overflow:hidden; background:#fff;">
+<input type="hidden" class="loginType" value="<?php echo $_SESSION['loginType']; ?>" />
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <div class="">
           <div class="content">
-            <div class="col-md-1"></div>
-            <div class="col-md-3">
+            <div class="col-md-3 textCenter">
               <img class="img-responsive" src="<?php echo $row['photo'] ?>" alt="No Image" width="160" style="margin: 0 auto;"/>
+              <h4><?php echo $row['firstName']; echo ' '; echo $row['lastName'] ?> </h4>
             </div>
             <div class="col-md-7">
               <table class="table">
                 <tbody>
+                  <tr>
+                    <td class="p-12 textBold" style="border-top: none;">certificate Number</td>
+                    <td class="p-12" style="border-top: none;"><?php echo $row['certificateNumber']; ?></td>
+                  </tr>
                   <tr>
                     <td class="p-12 textBold">DOB</td>
                     <td class="p-12"><?php echo $row['DOB']; ?></td>
@@ -38,6 +43,7 @@
                     <td class="p-12 textBold">Age</td>
                     <td class="p-12"><?php echo $row['age']; ?></td>
                   </tr>
+                  <!-- ko if: $root.aLogin -->
                   <tr>
                     <td class="p-12 textBold">Address</td>
                     <td class="p-12"><?php echo $row['address']; ?></td>
@@ -54,17 +60,18 @@
                     <td class="p-12 textBold">E-Mail</td>
                     <td class="p-12"><?php echo $row['email']; ?></td>
                   </tr>
+                  <!-- /ko -->
                   <tr>
                     <td class="p-12 textBold">Working</td>
-                    <td class="p-12"><?php echo $row['Working']; ?></td>
+                    <td class="p-12"><?php echo ucfirst($row['Working']); ?></td>
                   </tr>
                   <tr>
                     <td class="p-12 textBold">Organazation Name</td>
-                    <td class="p-12"><?php echo $row["OrganizationName"]; ?></td>
+                    <td><?php echo $row['Working']== "yes" ? $row['OrganizationName'] : "NA" ?></td>
                   </tr>
                   <tr>
                     <td class="p-12 textBold">Designation</td>
-                    <td class="p-12"><?php echo $row["Designation"]; ?></td>
+                    <td><?php echo $row['Working']== "yes" ? $row["Designation"] : "NA" ?></td>
                   </tr>
                   <tr>
                     <td>
@@ -134,9 +141,11 @@
                   </tr>
                 </tbody>
               </table>
+              <!-- ko if: $root.aLogin -->
               <div class="col-md-12 m-b-20">
                 <a class="btn btn-info dwnloadButton" href="<?php echo $row['Resume'] ?>" target="_blank">Download Resume</a>
               </div>
+              <!-- /ko -->
             </div>
           </div>
         </div>
@@ -147,7 +156,7 @@
 <?php include 'common/footer.php' ?>
 <script>
   if(location.href.indexOf("profile.php") >= -1){
-  	if($(".dwnloadButton").attr("href") == "javascript:;"){
+  	if($(".dwnloadButton").attr("href") == "javascript:;" || $(".dwnloadButton").attr("href") == ""){
   		$(".dwnloadButton").hide()
   	}
   }

@@ -47,6 +47,11 @@ $(document).ready(function () {
 				if ($('.skills').val() == "" || $('.courseStudied').val() == "" || $(".courseDuration").val() == "" || $(".certificateIssueDate").val() == "" || $(".grade").val() == "") {
 					valid = false;
 				}
+				if($("input[name='isWorking']:checked").val() == "yes"){
+					if($(".organizationName").val() == "" || $(".designation").val() == ""){
+						valid = false;
+					}
+				}
 				if (valid == false) {
 					$.notify({
 						icon: "pe-7s-bandaid",
@@ -162,6 +167,29 @@ $(document).on('click', '.viewProfile', function (event) {
 	$(this).attr("href", "profile.php?certiNum=" + certiNum);
 });
 
+
+$(document).on('blur', '.certificateNumber', function (e) {
+
+	var certiNum = $(".certificateNumber").val();
+		$.ajax({
+			type: "POST",
+			url: "ajaxCalls.php",
+			data: {
+				'action': 'checkDuplicate',
+				'certiNum': certiNum
+			},
+			cache: false,
+			success: function (response) {
+				var alreadyExists = JSON.parse(response);
+				if(parseInt(alreadyExists.exist) > 0 ){
+					$(".certiNumExists").show();
+					$( ".certificateNumber" ).focus();
+				}else{
+					$(".certiNumExists").hide();
+				}
+			}
+		});
+});
 
 $(document).on('click', '#saveStudentInfo', function (e) {
 
@@ -673,6 +701,7 @@ $(".closeBtn, body").click(function () {
 	$("#myModal").hide();
 });
 
+//Stop modal from hiding on click on modal body
 $(".verificationResult").click(function(e){
   e.stopPropagation();
 });

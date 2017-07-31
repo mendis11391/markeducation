@@ -1,5 +1,17 @@
 <?php include 'common/config.php' ?>
 <?php
+
+    if($_POST['action'] == 'checkDuplicate'){
+       $certinum = $_POST['certiNum'];
+       $sql= "SELECT COUNT(*) AS exist FROM student WHERE `certificateNumber` = '$certinum'";
+       $result=mysqli_query($mysqli,$sql);
+       $newRow = "";
+       while ($row = mysqli_fetch_array($result)) {
+           $newRow = $row;
+       }
+           echo json_encode($newRow);
+   }
+
    if($_POST['action'] == 'verifyStudent'){
        $certinum = $_POST['certiNum'];
        $sql= "select * from student where certificateNumber='$certinum'";

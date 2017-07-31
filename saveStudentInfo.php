@@ -38,6 +38,7 @@ if(!isset($_SESSION["markEduUsername"])){
                                     <div class="form-group">
                                        <label>Certificate Number</label><span class="required"> *</span>
                                        <input type="text" class="form-control certificateNumber" name="certificateNumber" placeholder="Certificate Number" value="">
+                                       <span class="certiNumExists" style="display:none; color:red;">Certificate Number Already Exists</span>
                                     </div>
                                  </div>
                                  <div class="col-md-4">
@@ -243,22 +244,22 @@ if(!isset($_SESSION["markEduUsername"])){
                                     <div class="form-group">
                                        <label>Working</label>
                                        <div class="form-group">
-                                          <label class="radio-inline"><input type="radio" name="isWorking" checked value="yes">Yes</label>
-                                          <label class="radio-inline"><input type="radio" name="isWorking" value="no">No</label>
+                                          <label class="radio-inline"><input type="radio" name="isWorking" value="yes">Yes</label>
+                                          <label class="radio-inline"><input type="radio" name="isWorking" checked value="no">No</label>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="row careerInfo">
+                              <div class="row careerInfo" style="display:none;">
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>Organization Name</label>
+                                       <label>Organization Name</label><span class="required"> *</span>
                                        <input type="text" class="form-control organizationName" name="organizationName" placeholder="Organization Name" value="">
                                     </div>
                                  </div>
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>Designation</label>
+                                       <label>Designation</label><span class="required"> *</span>
                                        <input type="text" class="form-control designation" name="designation" placeholder="Designation" value="">
                                     </div>
                                  </div>
@@ -308,8 +309,6 @@ if(!isset($_SESSION["markEduUsername"])){
                               <div class="clearfix"></div>
                               <div class="pager wizard">
                                  <ul class="pager wizard">
-                                    <li class="previous first" style="display:none;"><a href="javascript:;">First</a></li>
-                                    <li class="previous"><a href="javascript:;">Previous</a></li>
                                     <li class="next last" style="display:none;"><a href="javascript:;">Last</a></li>
 									                  <li class="next"><a href="javascript:;" class="uploadPhoto">Next</a></li>
                                  </ul>
