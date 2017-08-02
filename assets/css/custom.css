@@ -82,7 +82,7 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 120px;
+    padding-top: 40px;
     left: 0;
     top: 0;
     width: 100%;
@@ -95,7 +95,7 @@
     background-color: #fefefe;
     margin: auto;
     border: 1px solid #888;
-    width: 80%;
+    width: 65%;
 }
 /* The Close Button */
 
@@ -162,7 +162,7 @@
 
 
 .certiBorder{
-    border: 8px solid #3cc6ea;
+    border: 8px solid #323299;
 }
 
 .studentDetailTable td{
@@ -186,5 +186,36 @@
     display: none;
 }
 
+.isoLogo{
+    width:100px;
+    margin-top: -68px !important;
+}
+
+.markLogo{
+    width:150px;
+}
+
+.xs-p-t-40{
+    padding-top: 40px !important;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 650px) {
+
+.isoLogo{
+    width:100px;
+    margin-top: 0 !important;
+    margin: 0 auto;
+    float: none !important;
+}
+
+.markLogo{
+    width:200px;
+    margin: 0 auto;
+}
 
 }

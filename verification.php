@@ -50,7 +50,10 @@
 		  <div class="col-md-12 p-5 certiBorder modalResultErrorDiv">
 			<div class="col-md-12"><a class="pull-right closeBtn" href="javascript:;"><button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="color:#000;">×</button></a></div>
 			<div class="col-md-12">
-		  <img src="assets/img/logo.png" class="img-responsive" width="200" style="margin-top: -10px; margin: 0 auto;">
+        <div class="col-md-12">
+          <img src="assets/img/logo.png" class="img-responsive markLogo" width="200" style="margin-top: 0px;">
+          <img src="assets/img/iso.png" class="img-responsive pull-right isoLogo" width="100" style="margin-top: -78px;">
+        </div>
 		  </div>
               <div class="form-group">
                 <div class="col-sm-12 textCenter" style="margin: 60px 0;">
@@ -69,10 +72,12 @@
 				<a class="pull-right closeBtn" href="javascript:;"><button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="color:#000;">×</button></a>
 				</div>
 				<div class="col-md-12">
-		  <img src="assets/img/logo.png" class="img-responsive" width="200" style="margin-top: -10px;">
+		  <img src="assets/img/logo.png" class="img-responsive markLogo" width="200" style="margin-top: 0px;">
+      <img src="assets/img/iso.png" class="img-responsive pull-right isoLogo" width="100" style="margin-top: -78px;">
 		  </div>
                   <!--<img class="img-responsive profilePhoto" alt="No Image" width="160" style="margin: 0 auto;"/>-->
-				  <div class="col-md-12 textCenter">
+				  <div class="col-md-12 textCenter p-t-30 xs-p-t-40">
+          <img src="" class="img-responsive profilePhoto" width="150" style="margin: 0 auto;">
 					<h3 class="dispStudentName"></h3>
 					<p>has successfully completed <b><span class="dispCourse"></span></b></p>
 					<p>from <b>Mark Education Acadamy</b></p>
