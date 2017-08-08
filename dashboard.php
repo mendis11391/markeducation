@@ -20,12 +20,12 @@
                                     <!-- /ko -->
                                     <th>Profile</th>
                                     <th>Certificate Number</th>
-                                    <th>Name</th>
-                                    <th>Skills</th>
-                                    <th>Grade</th>
+                                    <th class="hideMobile">Name</th>
+                                    <th class="hideMobile">Skills</th>
+                                    <th class="hideMobile">Grade</th>
                                     <!-- ko if: $root.aLogin -->
                                     <th></th>
-                                    <th></th>
+                                    <th class="hideMobile"></th>
                                     <!-- /ko -->
                                 </tr>
                             </thead>
@@ -39,13 +39,13 @@
                                     <td><a href="javascript:;" target="_blank" class="viewProfile">View Profile</a>
                                     </td>
                                     <td data-bind="text:certificateNumber" id="certificateNumber">No Data Received</td>
-                                    <td data-bind="text: firstName">No Data Received</td>
-                                    <td data-bind="text: skills">No Data Received</td>
-                                    <td data-bind="text: Grade"> No Data Received</td>
+                                    <td data-bind="text: firstName" class="hideMobile">No Data Received</td>
+                                    <td data-bind="text: skills" class="hideMobile">No Data Received</td>
+                                    <td data-bind="text: Grade" class="hideMobile"> No Data Received</td>
                                     <!-- ko if: $root.aLogin -->
                                     <td><a href="javascript:;" id="editStudent"><i class="fa fa-pencil"></i></a>
                                     </td>
-                                    <td><a href="javascript:;" id="deleteStudent"><i class="fa fa-trash text-danger"></i></a>
+                                    <td class="hideMobile"><a href="javascript:;" id="deleteStudent"><i class="fa fa-trash text-danger"></i></a>
                                     </td>
                                     <!-- /ko -->
                                 </tr>

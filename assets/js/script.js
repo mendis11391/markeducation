@@ -705,3 +705,12 @@ $(".closeBtn, body").click(function () {
 $(".verificationResult").click(function(e){
   e.stopPropagation();
 });
+
+
+//Hide datable fields in mobile screen
+const mq = window.matchMedia( "(max-width: 550px)" );
+if (mq.matches) {
+  $(".hideMobile").hide();
+} else {
+  $(".hideMobile").show();
+}

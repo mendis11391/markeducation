@@ -199,12 +199,16 @@
     padding-top: 40px !important;
 }
 
+.content .loginForm{
+    width: 80% !important;
+}
+
 
 }
 
 
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 650px) {
 
 .isoLogo{
     width:100px;

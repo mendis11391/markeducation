@@ -45,7 +45,7 @@
    </head>
    <body style="background:#2d7fc7;">
       <div class="content">
-         <div class="container" style="width: 30%;">
+         <div class="container loginForm" style="width: 30%;">
             <div class="card" style="margin-top: 25vh;">
                <div class="content">
                   <form action="" method="post">
