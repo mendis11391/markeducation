@@ -68,7 +68,7 @@ $(document).ready(function () {
 				}
 			}
 			if (index == 4) {
-
+				return false;
 			}
 
 
@@ -579,9 +579,11 @@ $('.uploadPhoto').on('click', function () {
 	}
 	var form_data = new FormData();
 	form_data.append('file', file_data);
+	if (file_data != null || file_data != undefined) {
+		$(".uploadingPhoto").show();
 	$.ajax({
-		url: 'uploadPhoto.php?certinum=' + certiNum + '&ext=' + ext, // point to server-side PHP script 
-		dataType: 'text', // what to expect back from the PHP script, if anything
+		url: 'uploadPhoto.php?certinum=' + certiNum + '&ext=' + ext, 
+		dataType: 'text',
 		cache: false,
 		contentType: false,
 		processData: false,
@@ -589,12 +591,21 @@ $('.uploadPhoto').on('click', function () {
 		type: 'post',
 		success: function (response) {
 			if ($.trim(response) != 'File already exists') {
-
+				if ($.trim(response) == 'Something went wrong!') {
+					alert("Something went wrong! Please try again after sometime.");
+				} else {
+					$(".uploadingPhoto").hide();
+					$('#rootwizard').bootstrapWizard('show',4);
+				}
 			} else {
 				alert("File name already exists!");
 			}
+			
 		}
 	});
+}else{
+	$('#rootwizard').bootstrapWizard('show',4);
+}
 
 });
 

@@ -305,11 +305,18 @@
                   </div>
                   <div class="tab-pane" id="tab4">
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-8">
                         <div class="form-group">
                           <label>Profile Photo</label>
                           <input type="file" name="file" class="form-control photo" accept="image/jpeg, image/png"/>
                         </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <div class="uploadingPhoto" style="margin-top: 32px; display: none;">
+                          <span style="color: #2a9a0f; font-size: 16px;">Uploading  <img src="assets/img/loading.png" width="25" class=""/></span>
+                        </div>
+                      </div>
                       </div>
                       <div class="col-md-12">
                         <div class="alert alert-warning" style="color: #222;">
