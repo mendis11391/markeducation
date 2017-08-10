@@ -208,7 +208,7 @@
 
 
 
-@media screen and (min-width: 650px) {
+@media screen and (max-width: 650px) {
 
 .isoLogo{
     width:100px;

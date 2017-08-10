@@ -234,7 +234,14 @@
                                  <div class="col-md-6">
                                     <div class="form-group">
                                        <label>Grade</label><span class="required"> *</span>
-                                       <input type="text" class="form-control grade" name="grade" placeholder="Grade" value="<?php echo $row["Grade"]; ?>">
+                                        <select class="form-control grade" name="grade">
+                                            <option value="<?php echo $row["Grade"]; ?>" selected="selected"><?php echo $row["Grade"]; ?></option>
+                                            <option value="A">A</option>
+                                            <option value="A+">A+</option>
+                                            <option value="B">B</option>
+                                            <option value="B+">B+</option>
+                                            <option value="other">Other</option>
+                                        </select>
                                     </div>
                                  </div>
                               </div>

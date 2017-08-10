@@ -73,16 +73,16 @@
                       <img src="assets/img/logo.png" class="img-responsive markLogo" width="200" style="margin-top: 0px;">
                       <img src="assets/img/iso.png" class="img-responsive pull-right isoLogo" width="100" style="margin-top: -78px;">
                     </div>
-                    <!--<img class="img-responsive profilePhoto" alt="No Image" width="160" style="margin: 0 auto;"/>-->
                     <div class="col-md-12 textCenter p-t-30 xs-p-t-40">
                       <img src="" class="img-responsive profilePhoto" width="150" style="margin: 0 auto;">
                       <h3 class="dispStudentName"></h3>
-                      <p>has successfully completed <b><span class="dispCourse"></span></b></p>
+                      <p class="ifGradeIsNotOther">has successfully completed <b><span class="dispCourse"></span></b></p>
+                      <p class="ifGradeIsOther">has successfully participated in <b><span class="dispCourse"></span></b></p>
                       <p>from <b>Mark Education Acadamy</b></p>
                     </div>
                   </div>
                   <table style="width:100%;" class="studentDetailTable">
-                    <tr>
+                    <tr class="hideIfOther">
                       <td>Grade</td>
                       <td>: <span class="dispGrade"></span></td>
                       <td></td>

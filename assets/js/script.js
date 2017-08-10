@@ -621,6 +621,15 @@ $('#verifyStudent').on('click', function () {
 					$(".dispStudentName").text(studentName);
 					$(".dispCourse").text(obj[1].courseStudied);
 					$(".dispGrade").text(obj[1].Grade);
+					if($(".dispGrade").text() == "other"){
+						$(".hideIfOther").hide();
+						$(".ifGradeIsOther").show();
+						$(".ifGradeIsNotOther").hide();
+					}else{
+						$(".hideIfOther").show();
+						$(".ifGradeIsOther").hide();
+						$(".ifGradeIsNotOther").show();
+					}
 					$(".dispCertificateNum").text(obj[1].certificateNumber);
 					var dateString = obj[1].certificateIssueDate;
 					var dateObj = new Date(dateString);
