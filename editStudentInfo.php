@@ -31,7 +31,8 @@
                                     <li><a href="#tab1" data-toggle="tab">Personal</a></li>
                                     <li><a href="#tab2" data-toggle="tab">Education</a></li>
                                     <li><a href="#tab3" data-toggle="tab">Other</a></li>
-                                    <li><a href="#tab4" data-toggle="tab">Resume</a></li>
+                                    <li><a href="#tab4" data-toggle="tab">Photo</a></li>
+									<li><a href="#tab5" data-toggle="tab">Resume</a></li>
                                  </ul>
                               </div>
                            </div>
@@ -311,7 +312,51 @@
                                  </ul>
                               </div>
                            </div>
-                           <div class="tab-pane" id="tab4">
+						   <div class="tab-pane" id="tab4">
+						   <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <label>Update Photo ?</label>
+                                       <div class="form-group">
+                                          <label class="radio-inline"><input type="radio" name="updatePhoto" value="yes">Yes</label>
+                                          <label class="radio-inline"><input type="radio" name="updatePhoto" checked value="no">No</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+							  <div class="row reUploadPhoto" style="display:none;">
+							  <div class="col-md-8">
+								<div class="form-group">
+								  <label>Profile Photo</label>
+								  <input type="file" name="file" class="form-control photo" accept="image/jpeg, image/png"/>
+								</div>
+							  </div>
+							  <div class="col-md-4">
+								<div class="form-group">
+								  <div class="uploadingPhoto" style="margin-top: 32px; display: none;">
+								  <span style="color: #2a9a0f; font-size: 16px;">Updating  <img src="assets/img/loading.png" width="25" class=""/></span>
+								</div>
+							  </div>
+							  </div>
+							  <div class="col-md-12">
+								<div class="alert alert-warning" style="color: #222;">
+								  <strong>Important!</strong> 
+								  <p style="font-size: 13px;">Recommended image width is <strong>200 px</strong> and recommended height is <strong>250 px</strong>.</p>
+								  <p style="font-size: 13px;">Recommended image size is <strong>35 KB</strong>.</p>
+								</div>
+							  </div>
+							</div>
+                              <div class="clearfix"></div>
+                              <div class="pager wizard">
+                                 <ul class="pager wizard">
+                                    <li class="previous first" style="display:none;"><a href="javascript:;">First</a></li>
+                                    <li class="previous"><a href="javascript:;">Previous</a></li>
+                                    <li class="next last" style="display:none;"><a href="javascript:;">Last</a></li>
+                                    <li class="next" title="updateExistingPhoto"><a href="javascript:;" class="uploadPhoto">Next</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="tab-pane" id="tab5">
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="form-group">
@@ -324,12 +369,19 @@
                                  </div>
                               </div>
                               <div class="row">
-                                 <div class="col-md-12">
+                                 <div class="col-md-8">
                                     <div class="form-group reUploadResume" style="display:none;">
                                        <label>Resume</label>
                                        <input type="file" name="file" class="form-control resume" accept=".pdf"/>
                                     </div>
                                  </div>
+								 <div class="col-md-4">
+								<div class="form-group">
+								  <div class="uploadingResume" style="margin-top: 32px; display: none;">
+								  <span style="color: #2a9a0f; font-size: 16px;">Updating  <img src="assets/img/loading.png" width="25" class=""/></span>
+								</div>
+							  </div>
+							  </div>
                               </div>
                               <div class="clearfix"></div>
                               <div class="pager wizard">

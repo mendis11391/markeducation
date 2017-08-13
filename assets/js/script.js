@@ -129,6 +129,9 @@ $(document).ready(function () {
 					return false;
 				}
 			}
+			if (index == 4) {
+				return false;
+			}
 
 
 		},
@@ -515,6 +518,15 @@ $('input[name=updateResume]').change(function () {
 	}
 });
 
+//Edit profile page show / hide resume div
+$('input[name=updatePhoto]').change(function () {
+	if ($(this).val() == 'yes') {
+		$(".reUploadPhoto").show();
+	} else {
+		$(".reUploadPhoto").hide();
+	}
+});
+
 
 $('.saveUpdatedResume').on('click', function () {
 	var certiNum = $(".certificateNumber").val();
@@ -522,15 +534,17 @@ $('.saveUpdatedResume').on('click', function () {
 	var form_data = new FormData();
 	form_data.append('file', file_data);
 	if ($('input[name=updateResume]').val() == 'yes' && $('.resume').prop('files')[0] != null) {
+		$(".uploadingResume").show();
 		$.ajax({
-			url: 'uploadResume.php?certinum=' + certiNum + '&action=updateResume', // point to server-side PHP script 
-			dataType: 'text', // what to expect back from the PHP script, if anything
+			url: 'uploadResume.php?certinum=' + certiNum + '&action=updateResume',
+			dataType: 'text',
 			cache: false,
 			contentType: false,
 			processData: false,
 			data: form_data,
 			type: 'post',
 			success: function (response) {
+				$(".uploadingResume").hide();
 				setTimeout(function () {
 					location.href = "dashboard.php";
 				}, 2000);
@@ -551,7 +565,7 @@ $('.saveUpdatedResume').on('click', function () {
 	} else {
 		setTimeout(function () {
 			location.href = "dashboard.php";
-		}, 5000);
+		}, 2000);
 
 		$.notify({
 			icon: "pe-7s-like2",
@@ -573,6 +587,7 @@ $('.uploadPhoto').on('click', function () {
 	var certiNum = $(".certificateNumber").val();
 	var file_data = $('.photo').prop('files')[0];
 	var ext = "";
+	var action = $(this).parent().attr('title');
 	if (file_data != null || file_data != undefined) {
 		var revFname = $('.photo').prop('files')[0].name.split(".").reverse().join(".");
 		ext = revFname.split(".")[0];
@@ -582,7 +597,7 @@ $('.uploadPhoto').on('click', function () {
 	if (file_data != null || file_data != undefined) {
 		$(".uploadingPhoto").show();
 	$.ajax({
-		url: 'uploadPhoto.php?certinum=' + certiNum + '&ext=' + ext, 
+		url: 'uploadPhoto.php?certinum=' + certiNum + '&ext=' + ext,
 		dataType: 'text',
 		cache: false,
 		contentType: false,
@@ -595,7 +610,11 @@ $('.uploadPhoto').on('click', function () {
 					alert("Something went wrong! Please try again after sometime.");
 				} else {
 					$(".uploadingPhoto").hide();
-					$('#rootwizard').bootstrapWizard('show',4);
+					if(action == 'uploadNewPhoto'){
+						$('#rootwizard').bootstrapWizard('show',4);
+					}else{
+						$('#updateStudentDetailsDiv').bootstrapWizard('show',4);
+					}
 				}
 			} else {
 				alert("File name already exists!");
@@ -604,7 +623,11 @@ $('.uploadPhoto').on('click', function () {
 		}
 	});
 }else{
-	$('#rootwizard').bootstrapWizard('show',4);
+	if(action == 'uploadNewPhoto'){
+		$('#rootwizard').bootstrapWizard('show',4);
+	}else{
+		$('#updateStudentDetailsDiv').bootstrapWizard('show',4);
+	}
 }
 
 });

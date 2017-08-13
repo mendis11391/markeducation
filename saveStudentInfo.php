@@ -330,7 +330,7 @@
                     <div class="pager wizard">
                       <ul class="pager wizard">
                         <li class="next last" style="display:none;"><a href="javascript:;">Last</a></li>
-                        <li class="next"><a href="javascript:;" class="uploadPhoto">Next</a></li>
+                        <li class="next" title="uploadNewPhoto"><a href="javascript:;" class="uploadPhoto">Next</a></li>
                       </ul>
                     </div>
                   </div>
