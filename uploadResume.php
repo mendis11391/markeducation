@@ -6,9 +6,9 @@
   if($_FILES["file"]["name"] != ""){
       $target_file = $folder . basename($_FILES["file"]["name"]);
   }
-  $new_file_name = $certinum;
-  $fileExt = $folder  .$certinum . ".pdf";
-  
+  $new_file_name = str_replace('/', '-', $certinum);
+  $fileExt = $folder  .$new_file_name . ".pdf";
+  echo $fileExt;
   $action = "";
   if(isset($_GET['action'])) {
       $action = $_GET['action'];

@@ -115,6 +115,7 @@
            $arr = explode(",",$cheks);
            foreach ($arr as $file) {
                $file = str_replace('\'', '', $file);
+               $file = str_replace('/', '-', $file);
            if ( @unlink ( "resume/".$file.".pdf" ) ) {
                echo 'The file <strong><span style="color:green;">' . "resume/".$file.".pdf" . '</span></strong> was deleted!<br />';
            } else {
